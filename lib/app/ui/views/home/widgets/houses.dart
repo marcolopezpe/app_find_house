@@ -1,4 +1,5 @@
 import 'package:app_find_house/app/data/models/response/response_house_model.dart';
+import 'package:app_find_house/app/routes/app_routes.dart';
 import 'package:app_find_house/app/ui/views/home/home_controller.dart';
 import 'package:app_find_house/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
@@ -45,7 +46,7 @@ class ItemHouse extends StatelessWidget {
     final arrPhotos = house!.photo!.split(',');
     return GestureDetector(
       onTap: () {
-        /*Get.toNamed(AppRoutes.DETAIL, arguments: house);*/
+        Get.toNamed(AppRoutes.DETAIL, arguments: house);
       },
       child: Padding(
         padding: const EdgeInsets.only(

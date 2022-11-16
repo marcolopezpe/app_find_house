@@ -10,7 +10,7 @@ import 'package:get/get.dart';
 class CustomerProvider {
   final _dio = Get.find<Dio>();
 
-  Future<ResponseSignUpModel> signup(RequestSignUpModel requestSignup) async {
+  Future<ResponseSignUpModel> postSignup(RequestSignUpModel requestSignup) async {
     final response = await _dio.post(
       "/api/user/register",
       data: requestSignup.toJson(),

@@ -11,7 +11,7 @@ class CustomerRepository {
   final _apiProvider = Get.find<CustomerProvider>();
 
   Future<ResponseSignUpModel> signup(RequestSignUpModel requestSignup) =>
-      _apiProvider.signup(requestSignup);
+      _apiProvider.postSignup(requestSignup);
 
   Future<ResponseAuthModel> postAuth(RequestAuthModel requestAuth) =>
       _apiProvider.postAuth(requestAuth);

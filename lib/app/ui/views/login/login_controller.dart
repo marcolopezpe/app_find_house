@@ -17,13 +17,15 @@ class LoginController extends GetxController {
   }
 
   @override
-  void onClose() {
-    super.onClose();
+  void onReady() {
+    super.onReady();
   }
 
   @override
-  void onReady() {
-    super.onReady();
+  void onClose() {
+    ctrlTextEmail.dispose();
+    ctrlTextPassword.dispose();
+    super.onClose();
   }
 
   // Instances

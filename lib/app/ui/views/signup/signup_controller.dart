@@ -16,13 +16,18 @@ class SignUpController extends GetxController {
   }
 
   @override
-  void onClose() {
-    super.onClose();
+  void onReady() {
+    super.onReady();
   }
 
   @override
-  void onReady() {
-    super.onReady();
+  void onClose() {
+    crtlTextName.dispose();
+    crtlTextLastName.dispose();
+    crtlTextAddress.dispose();
+    crtlTextEmail.dispose();
+    crtlTextPassword.dispose();
+    super.onClose();
   }
 
   // Instances

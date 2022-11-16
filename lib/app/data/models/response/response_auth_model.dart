@@ -1,19 +1,20 @@
 class ResponseAuthModel {
   ResponseAuthModel({
     this.success,
-    required this.requestToken,
-    required this.idUser,
+    this.requestToken = "",
+    this.idUser = 0,
   });
 
   bool? success;
-  String requestToken = "";
-  int idUser = 0;
+  String requestToken;
+  int idUser;
 
-  ResponseAuthModel.fromJson(Map<String, dynamic> json) {
-    success = json['success'];
-    requestToken = json['request_token'];
-    idUser = json['id_user'];
-  }
+  factory ResponseAuthModel.fromJson(Map<String, dynamic> json) =>
+      ResponseAuthModel(
+        success: json["success"],
+        requestToken: json["request_token"],
+        idUser: json["id_user"],
+      );
 
   Map<String, dynamic> toJson() => {
         "success": success,
